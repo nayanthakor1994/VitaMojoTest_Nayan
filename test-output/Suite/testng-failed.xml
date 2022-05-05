@@ -4,15 +4,15 @@
   <listeners>
     <listener class-name="com.listeners.CucumberReport"/>
   </listeners>
-  <test thread-count="5" name="API_Test(failed)">
+  <test thread-count="5" name="Web_Test(failed)">
     <classes>
-      <class name="com.runner.APITestRunner">
+      <class name="com.runner.WebTestRunner">
         <methods>
           <include name="runScenario" invocation-numbers="1"/>
           <include name="tearDownClass"/>
           <include name="setUpClass"/>
         </methods>
-      </class> <!-- com.runner.APITestRunner -->
+      </class> <!-- com.runner.WebTestRunner -->
     </classes>
-  </test> <!-- API_Test(failed) -->
+  </test> <!-- Web_Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

@@ -3,6 +3,8 @@ package com.api.pages;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.utility.ReadProperty;
+
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
@@ -21,7 +23,7 @@ RequestSpecification request;
 		Map<String, Object> headerMap = new HashMap<String, Object>();
 		headerMap.put("Content-Type", "application/json");
 		headerMap.put("Accept", "*/*");
-		headerMap.put("tenant", "695a1486-80e7-4ee6-bc55-f4911944ef2a");
+		headerMap.put("tenant", ReadProperty.getPropertyValue("tenant"));
 		return headerMap;
 	}
 	

@@ -88,6 +88,10 @@ public class TestUtil {
 	}
 	
 	public void clickLocator(By locator) {
+		try {
+			waitForWebElementToBeClickable(locator, 5);
+		} catch (Exception e) {
+		}	
 		scrollToElement(locator);
 		try {
 			getElement(locator).click();
